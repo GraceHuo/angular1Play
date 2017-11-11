@@ -1,1 +1,1 @@
-# angular1Play
+Taking the course in Pluralsight: AngularJS Fundamentals
