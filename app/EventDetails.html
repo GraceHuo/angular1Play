@@ -13,11 +13,17 @@
       <ul class="nav">
         <li><a href="/NewEvent.html">Create Event</a></li>
         <li><a href="/EditProfile.html">Edit Profile</a></li>
+        <li><a href="/CacheSample.html">Cache Sample</a></li>
+        <li><a href="/CompileSample.html">Compile Sample</a></li>
       </ul>
     </div>
   </div>
   <div ng-controller="EventController" style="padding-left:20px; padding-right:20px">
     <img ng-src="{{event.imageUrl}}" alt="{{event.name}}"/>
+
+    <!--scroll button-->
+    <button type="button" class="btn btn-promary" ng-click="scrollToSession()">Scroll</button>
+
     <div class="row">
       <div class="span11">
         <h2 ng-style="mystyle"
@@ -74,7 +80,7 @@
       <option value="advanced" >Advanced</option>
     </select>
     <ul class="thumbnails">
-      <li ng-repeat="session in event.sessions | orderBy:sortorder | limitTo:3 | filter:query">
+      <li class="span11" id="session{{session.id}}" ng-repeat="session in event.sessions | orderBy:sortorder | limitTo:3 | filter:query">
         <div class="row session">
 
           <div class="span0 well votingWidget">
@@ -107,6 +113,7 @@
 <script src="/lib/bootstrap.min.js"></script>
 <script src="/lib/angular/angular.js"></script>
 <script src="/lib/angular/angular-sanitize.js"></script>
+<script src="/lib/angular/angular-resource.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/controllers/EventController.js"></script>
 <script src="/js/filters.js"></script>
