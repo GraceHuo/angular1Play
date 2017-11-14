@@ -1,6 +1,10 @@
 'use strict';
 
-eventsApp.controller( 'EventController', function( $scope, $anchorScroll, $location, eventData ) {
+eventsApp.controller( 'EventController', function( $scope, $anchorScroll, $location, eventData, $routeParams, $route ) {
+  console.log( $route.current.foo );
+  console.log( $route.current.params.foo );
+  console.log( $route.current.pathParams.eventId );
+
   $scope.sortorder      = 'name';
   $scope.boolVale       = true;
   $scope.buttonDisabled = true;
@@ -10,7 +14,7 @@ eventsApp.controller( 'EventController', function( $scope, $anchorScroll, $locat
   $scope.snippet = '<span style="color:red"> Hi there!</span>';
 
   // $resource
-  $scope.event = eventData.getEvent();
+  $scope.event = eventData.getEvent( $routeParams.eventId );
 
   // $http
   // eventData.getEvent()
@@ -31,5 +35,10 @@ eventsApp.controller( 'EventController', function( $scope, $anchorScroll, $locat
 
   $scope.scrollToSession = function() {
     $anchorScroll( "session3" );
-  }
+  };
+
+  $scope.reload = function() {
+    $route.reload();
+  };
+
 } );
