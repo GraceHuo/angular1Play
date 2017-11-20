@@ -10,7 +10,8 @@ eventsApp.directive( 'mySample', function( $compile ) {
 
   // if all we what is replace the directive with some html, we don't need to do the link function
   return {
-      restrict: 'E',
-      template: "<input type='text' ng-model='sampleData' /> {{sampleData}}<br/>"
+    restrict: 'E',
+    template: "<input type='text' ng-model='sampleData' /> {{sampleData}}<br/>",
+    // scope   : {}
   };
 } );

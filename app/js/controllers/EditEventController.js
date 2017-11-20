@@ -2,15 +2,15 @@
 
 eventsApp.controller( 'EditEventController', function EditEventController( $scope, eventData ) {
   $scope.saveEvent = function( event, newEventForm ) {
-    console.log( "newEventForm", newEventForm );
+    // console.log( "newEventForm", newEventForm );
     if ( newEventForm.$valid ) {
       eventData.save( event )
         .$promise.then(
         function( response ) {
-          console.log( 'success', response )
+          // console.log( 'success', response )
         },
         function( response ) {
-          console.log( 'failure', response )
+          // console.log( 'failure', response )
         }
       );
     }

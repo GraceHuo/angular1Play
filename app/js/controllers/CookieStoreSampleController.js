@@ -9,7 +9,7 @@ eventsApp.controller('CookieStoreSampleController',
         };
 
         $scope.getEventFromCookie = function() {
-            console.log($cookieStore.get('event'));
+          // console.log($cookieStore.get('event'));
         };
 
         $scope.removeEventCookie = function() {

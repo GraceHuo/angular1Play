@@ -21,7 +21,7 @@ var eventsApp = angular.module( 'eventsApp', ['ngSanitize', 'ngResource', 'ngRou
     $routeProvider.when('/sampleDirective',
       {
         templateUrl: 'templates/SampleDirective.html',
-        controller: 'SampleDirectiveController'
+        controller: 'directives/SampleDirectiveController'
       });
     $routeProvider.otherwise({redirectTo: '/events'});
     $locationProvider.html5Mode(true);

@@ -1,9 +1,9 @@
 'use strict';
 
 eventsApp.controller( 'EventController', function( $scope, $anchorScroll, $location, eventData, $routeParams, $route ) {
-  console.log( $route.current.foo );
-  console.log( $route.current.params.foo );
-  console.log( $route.current.pathParams.eventId );
+  // console.log( $route.current.foo );
+  // console.log( $route.current.params.foo );
+  // console.log( $route.current.pathParams.eventId );
 
   $scope.sortorder      = 'name';
   $scope.boolVale       = true;
